@@ -132,3 +132,39 @@ int main() {
     printf("%s",arr);
     return 0;
 }
+8.print individual character
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char arr[50];
+    fgets(arr,sizeof(arr),stdin);
+    puts(arr);
+    int index=0;
+    while(arr[index]!='\0')
+    {
+        printf("%c ",arr[index]);
+        index++;
+    }
+    return 0;
+}
+9.print thr individual character in reverse
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char arr[50];
+    fgets(arr,sizeof(arr),stdin);
+    puts(arr);
+    int index=0;
+    while(arr[index]!='\0')
+    index++;
+    //printf("%d",index);
+    for(int i=index-2;i>=0;i--)
+    {
+        printf("%c ",arr[i]);
+    }
+    return 0;
+}
