@@ -168,3 +168,22 @@ int main() {
     }
     return 0;
 }
+10.count the words in sentence
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char arr[50];
+    fgets(arr,sizeof(arr),stdin);
+    puts(arr);
+    int index=0,countword=0;
+    while(arr[index]!='\0')
+    {
+        if(arr[index]==' ' || arr[index]=='\t' || arr[index]=='\n')
+        countword++;
+        index++;
+    }
+    printf("%d",countword);
+    return 0;
+}
