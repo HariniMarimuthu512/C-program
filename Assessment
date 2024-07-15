@@ -290,3 +290,86 @@ int main() {
     }
     return 0;
 }
+day5
+6.Get input character from user and check whether character is uppercase or lowercase alphabet .
+
+Input Format
+
+C c
+
+Constraints
+
+NiL
+
+Output Format
+
+C is Uppercase letter c is lowercase letter
+
+Sample Input 0
+
+X
+Sample Output 0
+
+X is uppercase letter
+
+code:
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    char c;
+    scanf("%c",&c);
+    if((c>='a')&& (c<='z'))
+        printf("%c is lowercase letter",c);
+    else if((c>='A')&& (c<='Z'))
+        printf("%c is uppercase letter",c);
+    return 0;
+}
+
+7.Given a string and a character, task is to make a function which count occurrence of the given character in the string.
+
+Input Format
+
+e John Peter
+
+Constraints
+
+NIL
+
+Output Format
+
+2
+
+Sample Input 0
+
+e John Peter
+Sample Output 0
+
+2
+
+code:
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    char ch;
+    scanf("%c",&ch);
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+    int l=strlen(str),count=0;
+    for(int i=0;i<l-1;i++)
+    {
+        if(ch==str[i])
+            count++;
+    }
+    printf("%d",count);
+    return 0;
+}
