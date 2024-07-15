@@ -64,3 +64,26 @@ int main() {
     return 0;
 
 }
+4.sort the character without repeatation  
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
+    char alpha[26]={0};
+    int index=0;
+    fgets(str,sizeof(str),stdin);
+    while(str[index]!='\0')
+    {
+        alpha[str[index]-97]++;
+        index++;
+    }
+    for(index=0;index<26;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c",index+97,alpha[index]);
+        }
+    }
+    return 0;
+
+}
