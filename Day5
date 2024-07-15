@@ -1,3 +1,4 @@
+1.occurence with count
 // Online C compiler to run C program online
 #include <stdio.h>
 
@@ -16,4 +17,50 @@ int main() {
         printf("%c->%d\n",index,alpha[index]);
     }
     return 0;
+}
+2.toupper
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
+    char alpha[123]={0};
+    int index=0;
+    fgets(str,sizeof(str),stdin);
+    while(str[index]!='\0')
+    {
+        alpha[toupper (str[index])-58]++;
+        index++;
+    }
+    for(index=0;index<26;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c-->%d",index+58,alpha[index]);
+        }
+    }
+    return 0;
+
+}
+3.tolower
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
+    char alpha[26]={0};
+    int index=0;
+    fgets(str,sizeof(str),stdin);
+    while(str[index]!='\0')
+    {
+        alpha[tolower(str[index])-97]++;
+        index++;
+    }
+    for(index=0;index<26;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c-->%d",index+97,alpha[index]);
+        }
+    }
+    return 0;
+
 }
